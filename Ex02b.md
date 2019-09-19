@@ -24,7 +24,7 @@ Either candidate key can be primary key.
 * PetName - PetType, PetBreed, PetDOB, OwnerPhone)
 
 PetName is not a Candidate Key.
-## Step Four: Pet and Service:
+## Step Four: Pet and Service Relations:
 * Owner - (OwnerPhone, OwnerLastName, OwnerFirstName, OwnerEmail)
 * Pet - (PetName, PetBreed, PetType, PetDOB, OwnerEmail)
 * Service - (PetName, Service, Charge, Date)
