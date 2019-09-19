@@ -21,7 +21,7 @@ Either candidate key can be primary key.
 ### OwnerPhone as Primary Key:
 * Owner - (OwnerPhone, OwnerLastName, OwnerFirstName, OwnerEmail)
 * Pet - (PetName, PetType, PetBreed, PetDOB, OwnerPhone, Service, Date, Charge)
-* PetName - PetType, PetBreed, PetDOB, OwnerPhone)
+* PetName - (PetType, PetBreed, PetDOB, OwnerPhone)
 
 PetName is not a Candidate Key.
 ## Step Four: Pet and Service Relations:
