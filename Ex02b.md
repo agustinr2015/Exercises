@@ -6,7 +6,7 @@
 
 #### Is every determinant a candidate key?
 Non of the determinants are Candidate Key.
-## Step Two: Break into two reliations
+## Step Two: Break into two relaitions
 * Owner
 * Pet
 ## Step three: Owner Functional Dependencies and Candidate Keys.
