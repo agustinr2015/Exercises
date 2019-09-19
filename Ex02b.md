@@ -5,7 +5,7 @@
 * OwnerPhone - (OwnerFirstName, OwnerLastName, OwnerEmail)
 
 #### Is every determinant a candidate key?
-     Non of the determinants are candidate key.
+Non of the determinants are Candidate Key.
 ## Step Two: Break into two reliations
 * Owner
 * Pet
@@ -25,6 +25,12 @@ Either candidate key can be primary key.
 
 PetName is not a Candidate Key.
 ## Step Four: Pet and Service:
-*
+* Owner - (OwnerPhone, OwnerLastName, OwnerFirstName, OwnerEmail)
+* Pet - (PetName, PetBreed, PetType, PetDOB, OwnerEmail)
+* Service - (PetName, Service, Charge, Date)
+* PetName - (PetType, PetBreed, PetDOB, OwnerPhone)
 
+PetName is a Candidate Key.
+
+Normalization Complete.
 
