@@ -9,7 +9,7 @@
 ## Step Two: Break into two reliations
 * Owner
 * Pet
-### Owner: Functional Dependencies.
+## Step three: Owner Functional Dependencies.
 * OwnerEmail - (OwnerLastName, OwnerFirstName, OwnerPhone)
 * OwnerPhone - (OwnerLastName, OwnerFirstName, OwnerEmail)
 
@@ -17,4 +17,8 @@ Both OwnerEmail and OwnerPhone are candidate keys.
 
 Normalization Complete.
 
-Step three
+Either candidate key can be primary key.
+### OwnerPhone as Primary Key:
+* Owner - (OwnerPhone, OwnerLastName, OwnerFirstName, OwnerEmail)
+* Pet - (PetName, PetType, PetBreed, PetDOB, OwnerPhone)
+
