@@ -33,4 +33,8 @@ PetName is not a Candidate Key.
 PetName is a Candidate Key.
 
 Normalization Complete.
+## Final Normalization Relations:
+* Owner - (OwnerPhone, OwnerLastName, OwnerFirstName, OwnerEmail)
+* Pet - (PetName, PetType, PetBreed, PetDOB, OwnerPhone)
+* Service - (PetName, Date, Service, Charge)
 
