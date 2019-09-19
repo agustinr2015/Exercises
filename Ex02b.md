@@ -9,7 +9,7 @@
 ## Step Two: Break into two reliations
 * Owner
 * Pet
-## Step three: Owner Functional Dependencies.
+## Step three: Owner Functional Dependencies and Candidate Keys.
 * OwnerEmail - (OwnerLastName, OwnerFirstName, OwnerPhone)
 * OwnerPhone - (OwnerLastName, OwnerFirstName, OwnerEmail)
 
@@ -21,4 +21,6 @@ Either candidate key can be primary key.
 ### OwnerPhone as Primary Key:
 * Owner - (OwnerPhone, OwnerLastName, OwnerFirstName, OwnerEmail)
 * Pet - (PetName, PetType, PetBreed, PetDOB, OwnerPhone)
+## Step Four: Pet Functional Dependencies and Candidate Keys.
+
 
