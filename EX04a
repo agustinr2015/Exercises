@@ -1,0 +1,271 @@
+/* Query-CH03-01 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT ProjectID, ProjectName, Department, MaxHours,
+StartDate, EndDate
+FROM PROJECT;
+/* Query-CH03-02 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT *
+FROM PROJECT;
+/* Query-CH03-03 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT ProjectName, Department, MaxHours
+FROM PROJECT;
+/* Query-CH03-04 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT ProjectName, MaxHours, Department
+FROM PROJECT;
+/* Query-CH03-05 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT Department
+FROM PROJECT;
+/* Query-CH03-06 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT DISTINCT Department
+FROM PROJECT;
+/* Query-CH03-07 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT *
+FROM PROJECT
+WHERE Department = 'Finance';
+/* Query-CH03-08 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT *
+FROM PROJECT
+WHERE StartDate = '05/10/2017';
+/* Query-CH03-09 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT *
+FROM PROJECT
+WHERE MaxHours > 135;
+/* Query-CH03-10 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT FirstName, LastName, Department, OfficePhone
+FROM EMPLOYEE
+WHERE Department = 'Accounting';
+/* Query-CH03-11 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT FirstName, LastName, Department, OfficePhone
+FROM EMPLOYEE
+ORDER BY Department;
+/* Query-CH03-12 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+/* *** SQL-Query-CH03-12 *** */
+SELECT FirstName, LastName, Department, OfficePhone
+FROM EMPLOYEE
+ORDER BY Department DESC;
+/* Query-CH03-13 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT FirstName, LastName, Department, OfficePhone
+FROM EMPLOYEE
+ORDER BY Department DESC, LastName ASC;
+/* Query-CH03-14 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT FirstName, LastName, Department, OfficePhone
+FROM EMPLOYEE
+WHERE Department = 'Accounting'
+AND OfficePhone = '360-285-8430';
+/* Query-CH03-15 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+/* *** SQL-Query-CH03-15 *** */
+SELECT FirstName, LastName, Department, OfficePhone
+FROM EMPLOYEE
+WHERE Department = 'Accounting'
+OR OfficePhone = '360-285-8410';
+/* Query-CH03-16 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT FirstName, LastName, Department, OfficePhone
+FROM EMPLOYEE
+WHERE Department = 'Accounting'
+AND NOT OfficePhone = '360-285-8430';
+/* Query-CH03-17 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT FirstName, LastName, Department, OfficePhone
+FROM EMPLOYEE
+WHERE Department IN ('Administration', 'Finance',
+'Accounting');
+/* Query-CH03-18 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT FirstName, LastName, Department, OfficePhone
+FROM EMPLOYEE
+WHERE Department NOT IN ('Administration', 'Finance',
+'Accounting');
+/* Query-CH03-19 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT FirstName, LastName, Department, OfficePhone
+FROM EMPLOYEE
+WHERE EmployeeNumber >= 2
+AND EmployeeNumber <= 5;
+/* Query-CH03-20 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT FirstName, LastName, Department, OfficePhone
+FROM EMPLOYEE
+WHERE EmployeeNumber BETWEEN 2 AND 5;
+/* Query-CH03-21 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT *
+FROM PROJECT
+WHERE ProjectName LIKE '2017 Q_ Portfolio Analysis';
+/* Query-CH03-22 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT *
+FROM EMPLOYEE
+WHERE OfficePhone LIKE '360-287-88 ';
+/* Query-CH03-23 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT *
+FROM EMPLOYEE
+WHERE OfficePhone LIKE '360-287-88%';
+/* Query-CH03-24 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT *
+FROM EMPLOYEE
+WHERE Department LIKE '%ing';
+/* Query-CH03-25 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT *
+FROM EMPLOYEE
+WHERE Department NOT LIKE '%ing';
+/* Query-CH03-26 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT FirstName, LastName, Department, OfficePhone
+FROM EMPLOYEE
+WHERE OfficePhone IS NULL;
+/* Query-CH03-27 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT FirstName, LastName, Department, OfficePhone
+FROM EMPLOYEE
+WHERE OfficePhone IS NOT NULL;
+/* Query-CH03-28 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT COUNT(*)
+FROM PROJECT;
+/* Query-CH03-29 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT COUNT(*) AS NumberOfProjects
+FROM PROJECT;
+/* Query-CH03-30 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT COUNT(Department) AS NumberOfDepartments
+FROM PROJECT;
+/* Query-CH03-31 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT COUNT(DISTINCT Department) AS NumberOfDepartments
+FROM PROJECT;
+/* Query-CH03-32 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT SUM(MaxHours) AS TotalMaxHours,
+AVG(MaxHours) AS AverageMaxHours,
+MIN(MaxHours) AS MinimumMaxHours,
+MAX(MaxHours) AS MaximumMaxHours
+FROM PROJECT
+WHERE ProjectID <= 1200;
+/* Query-CH03-33 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT ProjectName, COUNT(*)
+FROM PROJECT;
+/* Query-CH03-34 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT *
+FROM PROJECT
+WHERE MaxHours > AVG(MaxHours);
+/* Query-CH03-35 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT ProjectID, ProjectName, MaxHours,
+(24.50 * MaxHours) AS MaxProjectCost
+FROM PROJECT;
+/* Query-CH03-36 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT Department, Count(*) AS NumberOfEmployees
+FROM EMPLOYEE
+GROUP BY Department;
+/* Query-CH03-37 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT Department, Count(*) AS NumberOfEmployees
+FROM EMPLOYEE
+GROUP BY Department
+HAVING COUNT(*) > 1;
+/* Query-CH03-38 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT Department, Count(*) AS NumberOfEmployees
+FROM EMPLOYEE
+WHERE EmployeeNumber <= 10
+GROUP BY Department
+HAVING COUNT(*) > 1;
+/* Query-CH03-39 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+SELECT FirstName, LastName
+FROM EMPLOYEE
+WHERE EmployeeNumber IN (6, 10, 11, 16, 17);
+
+/* Query-CH03-40 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+
+SELECT DISTINCT EmployeeNumber
+FROM ASSIGNMENT
+WHERE HoursWorked > 50;
+
+
+/* Query-CH03-41 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+
+SELECT FirstName, LastName
+FROM EMPLOYEE
+WHERE EmployeeNumber IN
+(SELECT DISTINCT EmployeeNumber
+FROM ASSIGNMENT
+WHERE HoursWorked > 50);
+
+/* Query-CH03-42 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+
+SELECT DISTINCT ProjectID
+FROM PROJECT
+WHERE Department = 'Accounting';
+
+/* Query-CH03-43 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+
+/* *** SQL-Query-CH03-43 *** */
+SELECT DISTINCT EmployeeNumber
+FROM ASSIGNMENT
+WHERE HoursWorked > 40
+AND ProjectID IN
+(SELECT ProjectID
+FROM PROJECT
+WHERE Department = 'Accounting');
+
+/* Query-CH03-44 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+
+SELECT FirstName, LastName
+FROM EMPLOYEE
+WHERE EmployeeNumber IN
+      (SELECT DISTINCT EmployeeNumber
+       FROM ASSIGNMENT
+       WHERE HoursWorked > 40
+       AND ProjectID IN
+           (SELECT ProjectID
+           FROM PROJECT
+           WHERE Department = 'Accounting'));
+
+/* Query-CH03-45 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+
+SELECT FirstName, LastName, ProjectID, HoursWorked
+FROM EMPLOYEE, ASSIGNMENT;
+
+/* Query-CH03-46 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+
+ SELECT FirstName, LastName, ProjectID, HoursWorked
+FROM EMPLOYEE, ASSIGNMENT
+WHERE EMPLOYEE.EmployeeNumber = ASSIGNMENT.EmployeeNumber;
+
+/* Query-CH03-47 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+
+SELECT FirstName, LastName, ProjectID, HoursWorked
+FROM EMPLOYEE, ASSIGNMENT
+WHERE EMPLOYEE.EmployeeNumber = ASSIGNMENT.
+EmployeeNumber
+ORDER BY EMPLOYEE.EmployeeNumber, ProjectID;  
+
+/* Query-CH03-48 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+
+SELECT FirstName, LastName, ProjectID, HoursWorked
+FROM EMPLOYEE JOIN ASSIGNMENT
+      ON EMPLOYEE.EmployeeNumber = ASSIGNMENT.EmployeeNumber
+ORDER BY EMPLOYEE.EmployeeNumber, ProjectID;          
+
+/* Query-CH03-49 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+
+SELECT FirstName, LastName,
+SUM(HoursWorked) AS TotalHoursWorked
+FROM EMPLOYEE AS E JOIN ASSIGNMENT AS A
+ON E.EmployeeNumber = A.EmployeeNumber
+GROUP BY LastName, FirstName
+ORDER BY LastName, FirstName;
+
+/* Query-CH03-50 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+
+SELECT FirstName, LastName, ProjectID, HoursWorked
+FROM EMPLOYEE AS E JOIN ASSIGNMENT AS A
+ON E.EmployeeNumber = A.EmployeeNumber
+WHERE HoursWorked > 50
+ORDER BY LastName, FirstName, ProjectID;
+
+/* Query-CH03-51 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+
+SELECT ProjectName, FirstName, LastName, HoursWorked
+FROM EMPLOYEE AS E JOIN ASSIGNMENT AS A
+      ON E.EmployeeNumber = A.EmployeeNumber
+          JOIN PROJECT AS P
+              ON A.ProjectID = P.ProjectID
+ORDER BY P.ProjectID, A. EmployeeNumber;
+
+/* Query-CH03-52 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+
+ SELECT * FROM PROJECT;
+
+/* Query-CH03-53 by Mumue Lar Htoo and Agustin Ramirez Sosa */
+
+SELECT ProjectName, FirstName, LastName, HoursWorked
+FROM EMPLOYEE AS E JOIN ASSIGNMENT AS A
+    ON E.EmployeeNumber = A.EmployeeNumber
+      JOIN PROJECT AS P
+         ON A.ProjectID = P.ProjectID
+ORDER BY P.ProjectID, A.EmployeeNumber;
